@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <title>My Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+    <header>
+        <h1>MY BLOG</h1>
+        <p>Welcome to the blog of <span class="dark">unknown</span></p>
+    </header>
+    <main>
+        <section>
+            <div class="section_card">
+                <img src="{{ url_for('static', filename='imgs/section1.png') }}" alt="https://www.w3schools.com/w3images/woods.jpg" class="section_card_img">
+                <div class="section_card_caption">
+                    <div class="section_card_title">
+                        <h2 class="section_card_subtitle">TITLE HEADING</h2>
+                        <span>Title description, <span>April 7, 2014</span></span>
+                    </div>
+                    <p>
+                        Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                    </p>
+                    <div class="section_card_footer">
+                        <button class="section_card_button">read more >></button>
+                        <div>
+                            <span>Comments</span>
+                            <span>0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section_card">
+                <img src="{{ url_for('static', filename='imgs/section2.png') }}" alt="https://www.w3schools.com/w3images/woods.jpg" class="section_card_img">
+                <div class="section_card_caption">
+                    <div class="section_card_title">
+                        <h2 class="section_card_subtitle">TITLE HEADING</h2>
+                        <span>Title description, <span>April 7, 2014</span></span>
+                    </div>
+                    <p>
+                        Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                    </p>
+                    <div class="section_card_footer">
+                        <button class="section_card_button">read more >></button>
+                        <div>
+                            <span>Comments</span>
+                            <span>0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside>
+        </aside>
+    <main>
+    <footer>
+        <span>Ostki qism</span>
+    </footer>
+</body>
+</html>

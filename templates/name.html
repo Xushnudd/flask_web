@@ -53,6 +53,17 @@
                     {% endfor %}
                 </div>
             </div>
+            <div class="card">
+                <div class="card_title">{{datas.tags.title}}</div>
+                <div class="card_caption tags">
+                    {% for item in datas.tags.tags %}
+                        {% if item.actual == True %}
+                        <span class="dark">{{item.name}}</span>
+                        {% endif %}
+                        <span class="light">{{item.name}}</span>
+                    {% endfor %}
+                </div>
+            </div>
         </aside>
     </main>
     <footer>

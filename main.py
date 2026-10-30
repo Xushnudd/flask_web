@@ -42,6 +42,24 @@ def name():
         "posts": {
             "title": "Popular Posts",
             "datas": []
+        },
+        "tags": {
+            "title": "Tags",
+            "tags": [
+                {"name": "Travel", "actual": True},
+                {"name": "New York", "actual": False},
+                {"name": "London", "actual": False},
+                {"name": "IKEA", "actual": False},
+                {"name": "NORWAY", "actual": False},
+                {"name": "DIY Ideas", "actual": False},
+                {"name": "Baby", "actual": False},
+                {"name": "Family", "actual": False},
+                {"name": "News", "actual": False},
+                {"name": "Clothing", "actual": False},
+                {"name": "Shopping", "actual": False},
+                {"name": "Sports", "actual": False},
+                {"name": "Games", "actual": False}
+            ]
         }
     }
     

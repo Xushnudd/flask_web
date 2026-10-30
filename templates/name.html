@@ -11,22 +11,20 @@
     </header>
     <main>
         <section>
-            {% for i in range(1,3) %}
-            <div class="section_card">
-                <img src="{{ url_for('static', filename='imgs/section' ~ i ~'.png') }}" alt="https://www.w3schools.com/w3images/woods.jpg" class="section_card_img">
-                <div class="section_card_caption">
+            {% for item in datas.section %}
+            <div class="card">
+                <img src="{{ item.image.url }}" alt="{{ item.image.alt }}" class="section_card_img">
+                <div class="card_caption">
                     <div class="section_card_title">
-                        <h2>TITLE HEADING</h2>
-                        <span class="section_card_subtitle">Title description, <span class="data">{{dates[i-1]}}</span></span>
+                        <h2>{{ item.title }}</h2>
+                        <span class="section_card_subtitle">{{ item.subtitle }}, <span class="data">{{ item.date }}</span></span>
                     </div>
-                    <p>
-                        Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
-                    </p>
+                    <p>{{ item.text }}</p>
                     <div class="section_card_footer">
-                        <button class="section_card_button">read more >></button>
+                        <button class="section_card_button">{{ item.button }}</button>
                         <div>
                             <span>Comments</span>
-                            <span class="dark">0</span>
+                            <span class="dark">{{ item.comments }}</span>
                         </div>
                     </div>
                 </div>
@@ -34,8 +32,29 @@
             {% endfor %}
         </section>
         <aside>
+            <div class="card">
+                <img src="{{ datas.profile.image.url }}" alt="{{ datas.profile.image.alt }}">
+                <div class="card_caption">
+                    <h2>{{ datas.profile.title }}</h2>
+                    <p>{{ datas.profile.text }}</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card_title">{{ datas.posts.title }}</div>
+                <div class="card_caption">
+                    {% for item in datas.posts.datas %}
+                    <div class="post_card">
+                        <img src="{{ item.img_url }}" alt="{{ item.img_alt }}" class="post_img" />
+                        <div class="post_caption">
+                            <h3>{{ item.title }}</h3>
+                            <span>{{ item.subtitle }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
         </aside>
-    <main>
+    </main>
     <footer>
         <span>Ostki qism</span>
     </footer>

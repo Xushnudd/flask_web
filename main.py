@@ -60,7 +60,11 @@ def name():
                 {"name": "Sports", "actual": False},
                 {"name": "Games", "actual": False}
             ]
-        }
+        },
+        "footer": [
+            {"name": "previous", "status": "old"},
+            {"name": "next", "status": "next"}
+        ]
     }
     
     for i in range(1, 5):

@@ -59,15 +59,22 @@
                     {% for item in datas.tags.tags %}
                         {% if item.actual == True %}
                         <span class="dark">{{item.name}}</span>
-                        {% endif %}
+                        {% else %}
                         <span class="light">{{item.name}}</span>
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>
         </aside>
     </main>
     <footer>
-        <span>Ostki qism</span>
+        {% for item in datas.footer %}
+            {% if item.status == "old" %}
+            <button class="button old">{{ item.name }}</button>
+            {% else %}
+            <button class="button next">{{ item.name }}</button>
+            {% endif %}
+        {% endfor %}
     </footer>
 </body>
 </html>
